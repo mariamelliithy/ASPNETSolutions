@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        @*Start navbar*@
+        <nav class="mt-3">
+            <center>
+                @*Asp .net core ==> Tag helpers ==> Mix html , c#*@
+                <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="btn btn-secondary" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                <a class="btn btn-success" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                <a class="btn btn-info" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+                <a class="btn btn-dark text-white" asp-controller="Account" asp-action="Login">Login</a>
+                <a class="btn btn-warning" asp-controller="Account" asp-action="Register">Register</a>
+            </center>
+        </nav>
+        @*End navbar*@
+        @RenderBody()
+        @*Start footer*@
+        <center>
+            <p>CopyRights &copy; Route @DateTime.Now.Year</p>
+        </center>
+        @*End footer*@
+    </div>
+</body>
+</html>
